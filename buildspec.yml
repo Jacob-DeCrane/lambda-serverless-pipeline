@@ -16,10 +16,10 @@ phases:
       # linting and unit tests
       - npm run-script lint
       - npm test
-#       # deploy integration testing environment
-#       - serverless deploy --stage test -v
-#       # integration tests
-#       - npm run-script integration
+      # deploy integration testing environment
+      - serverless deploy --stage test -v
+      # integration tests
+      - npm run-script integration
 #       # create directory for deployment packages
 #       - mkdir artifacts
 #       # create staging deployment package
@@ -28,10 +28,10 @@ phases:
 #       # create prod deployment package
 #       - mkdir artifacts/prod
 #       - serverless package --package artifacts/prod --stage prod -v
-#   post_build:
-#     commands:
-#       # tear down integration testing environment
-#       - serverless remove --stage test -v
+  post_build:
+    commands:
+      # tear down integration testing environment
+      - serverless remove --stage test -v
 
 # artifacts:
 #   files:
