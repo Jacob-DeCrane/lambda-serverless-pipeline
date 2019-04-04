@@ -27,7 +27,7 @@ phases:
       - serverless package --package artifacts/dev --stage dev -v
       # create prod deployment package
       - mkdir artifacts/qa
-      - serverless package --package artifacts/qa --stage prod -v
+      - serverless package --package artifacts/qa --stage qa -v
   # post_build:
   #   commands:
   #     # tear down integration testing environment
